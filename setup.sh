@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 # This script sets up the environment for the PHP application
 
 
