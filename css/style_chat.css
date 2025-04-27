@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #212121;
+    color: #ecf0f1;
+    padding: 0;
+    margin: 0; 
+}
+
+form {
+    padding: 15px 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+input {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #a1adb4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+#wrapper{
+    margin: 50px auto; 
+    padding-bottom: 25px;
+    background: #2e373f;
+    max-width: 70%;
+    border: 1px solid #8f8f8f;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#chatbox {
+    text-align: left;
+    margin: 0 auto 25px auto;
+    padding: 10px;
+    background: #253442;
+    height: 450px; /* Default height for desktop */
+    width: 90%;
+    border: 1px solid #8f8f8f;
+    overflow: auto;
+    border-radius: 8px;
+}
+
+#usermsg {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #8f8f8f;
+    border-radius: 5px;
+    background: #9faab5;
+    color: #242626;
+}
+
+#name {
+    padding: 8px;
+    border: 1px solid #8f8f8f;
+    border-radius: 5px;
+    background: #9faab5;
+    color: #242626;
+}
+
+#submitmsg,
+#enter {
+    padding: 8px 15px;
+    background-color: #801212f0;
+    color: #ecf0f1;
+    border: 1px solid #8f8f8f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#submitmsg:hover,
+#enter:hover {
+    background-color: #95a6b0;
+}
+
+.error {
+    color: #ff0000;
+}
+
+#menu {
+    padding: 15px 25px;
+    display: flex;
+    background-color: #212121;
+    border-bottom: 1px solid #212121;
+    border-radius: 10px 10px 0 0;
+}
+
+#menu p.welcome {
+    flex: 1;
+    color: #d1ddde;
+}
+
+a#exit {
+    color: #ecf0f1;
+    background: #801212f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+a#exit:hover {
+    background: #95a6b0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.msgln {
+    margin: 0 0 5px 0;
+    color: #ecf0f1;
+}
+
+.msgln span.left-info {
+    color: #ff9800;
+}
+
+.msgln span.chat-time {
+    color: #9faab5;
+    font-size: 60%;
+    vertical-align: super;
+}
+
+.msgln b.user-name, 
+.msgln b.user-name-left {
+    font-weight: bold;
+    background: #213155f0;
+    color: #ecf0f1;
+    padding: 2px 4px;
+    font-size: 90%;
+    border-radius: 4px;
+    margin: 0 5px 0 0;
+}
+
+.msgln b.user-name-left {
+    background: #801212f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100vh; /* Full viewport height */
+        overflow: hidden; /* Prevent scrolling outside chat */
+    }
+
+    #wrapper{
+        max-width: 100%; /* Full width on mobile */
+        width: 100%; /* Ensure it takes full width */
+        height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove margins */
+        padding: 0; /* Adjust padding */
+        border: none; /* Remove border for full-screen effect */
+        border-radius: 0; /* Remove rounding for full-screen */
+        box-shadow: none; /* Remove shadow on mobile */
+        display: flex;
+        flex-direction: column; /* Stack contents vertically */
+        background: #253442;
+    }
+
+    #menu {
+        padding: 10px 15px;
+        border-radius: 0; /* Flat top on mobile */
+        flex-shrink: 0; /* Prevent menu from shrinking */
+    }
+
+    #chatbox {
+        width: 100%; /* Full width */
+        margin-bottom: 100px;
+        padding: 10px;
+        height: auto; /* Allow it to grow */
+        flex-grow: 1; /* Take up remaining space */
+        border-radius: 0; /* Flat edges */
+        border: none; /* Remove border */
+        overflow-y: auto; /* Scroll only vertically */
+    }
+
+    form {
+        padding: 10px 15px;
+        flex-direction: row; /* Keep horizontal layout */
+        flex-shrink: 0;
+        background: #2e373f;
+        border-top: 1px solid #212121;
+        width: 100%; /* Ensure form takes full width */
+        position: sticky; /* Keep form at bottom */
+        bottom: 0; /* Stick to bottom of screen */
+        z-index: 10; /* Ensure it stays above chatbox */
+        gap: 5px; /* Reduce gap for smaller screens */
+    }
+
+    #usermsg {
+        flex: 1; /* Allow input to take available space */
+        width: auto; /* Remove fixed width */
+        margin: 0;
+        min-width: 0; /* Prevent overflow */
+    }
+
+    #name {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #submitmsg,
+    #enter {
+        padding: 8px 12px;
+        width: auto;
+        flex-shrink: 0; /* Prevent button from shrinking too much */
+        white-space: nowrap; /* Keep button text on one line */
+    }
+}
+

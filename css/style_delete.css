@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #212121;
+    color: #ecf0f1;
+    padding: 0px;
+}
+
+.container {
+    max-width: 70%; 
+    margin: 50px auto;
+    padding: 70px;
+    background: #2e373f;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 5rem;
+    color: #ecf0f1; 
+}
+
+p {
+    margin: 20px 0;
+    color: #ecf0f1; 
+}
+
+/* Style the form-group div to place buttons side by side */
+.form-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 1rem; /* Adds spacing between buttons */
+    justify-content: flex-start; /* Aligns buttons to the left */
+}
+
+/* Style for all inputs */
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #212121; 
+    border-radius: 5px; 
+    width: 100%;
+    background: #9faab5; 
+    color: #242626; 
+}
+
+/* Style for submit buttons */
+input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #801212f0; 
+    color: #ecf0f1;
+    border: 1px solid #212121; 
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s; 
+    width: auto; /* Override the 100% width to allow buttons to size naturally */
+    display: inline-block; /* Ensure buttons are inline */
+}
+
+/* Specific styling for the Cancel button to differentiate it */
+input[type="submit"][name="cancel"] {
+    background-color: #213155f0; /* Matches the select background color from index.php for a "neutral" look */
+}
+
+input[type="submit"]:hover {
+    background-color: #95a6b0; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; 
+        margin-bottom: 10px;
+    }
+    
+    .container {
+        max-width: 95%; 
+        padding: 20px; 
+        margin: 20px auto; 
+    }
+    
+  
+}

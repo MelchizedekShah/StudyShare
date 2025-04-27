@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 5rem;
+    
+}
+
+
+body {
+    background: #212121;
+    color: #ecf0f1;
+    padding: 0px;
+}
+
+.container {
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 70px;
+    background: #2e373f;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: #253442;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #212121;
+    color: #ecf0f1;
+}
+
+th {
+    background-color: #212121;
+    color: #d1ddde;
+}
+
+a {
+    color: #a1adb4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+.search-form {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    background: #9faab5;
+    color: #242626;
+}
+
+.search-form select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    background: #213155f0;
+    color: #ecf0f1;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    background-color: #801212f0;
+    color: #ecf0f1;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #95a6b0;
+}
+
+.no-summaries {
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    background: #2e373f;
+    border-radius: 5px;
+    margin-top: 100px;
+    font-size: large;
+}
+.login-link {
+    font-size: x-large; 
+}
+
+.flash {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flash {
+        font-size: large;
+        margin-bottom: 10px;
+    }
+    h1 {
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+    
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .search-form {
+        align-items: center;
+        gap: 8px;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    
+    .search-form input[type="text"],
+    .search-form select,
+    .search-form button {
+        width: 100%;
+        margin: 0;
+   
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px;
+        min-width: 100px;
+    }
+    .no-summaries {
+        padding: 15px;
+        font-size: 14px;
+        margin: 15px 0;
+    }
+}
+
+

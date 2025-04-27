@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c2526; /* Dark background for the body */
+}
+
+.login-container {
+    background: #2c3e50; /* Darker container background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ced5d8; 
+    font-size: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #4a5e6a; /* Darker border */
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background: #34495e; /* Dark input background */
+    color: #ecf0f1; /* Light text color for input */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4da8da; /* Lighter blue for focus */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #bdc3c7; /* Light gray for labels */
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #95a5a6; /* Light gray for toggle */
+}
+
+/* Shared button styles */
+.button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+/* Button group for side-by-side layout */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Log In button styles */
+.button-login {
+    background: #214f6d; /* Slightly lighter blue for dark theme */
+    color: #ecf0f1; /* Light text */
+}
+
+.button-login:hover {
+    background: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button-login:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4); /* Adjusted focus ring */
+}
+
+/* Cancel button styles */
+.button-cancel {
+    background: #a34035; /* Slightly lighter red for dark theme */
+    color: #ecf0f1;
+}
+
+.button-cancel:hover {
+    background: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button-cancel:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.4);
+}
+
+/* Sign Up button styles */
+.button-signup {
+    background: #1e693d; /* Slightly lighter green for dark theme */
+    color: #ecf0f1;
+}
+
+.button-signup:hover {
+    background: #27ae60; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button-signup:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .button {
+        width: 100%;
+    }
+    .login-container {
+        margin-top: 10px;
+    }
+    .login-container {
+        padding-top: 30%;
+        padding-bottom: 70%;
+        width: 100%;          
+        max-width: none;     
+        margin-left: 0;       
+        margin-right: 0;      
+        border-radius: 0;    
+    }
+   
+}

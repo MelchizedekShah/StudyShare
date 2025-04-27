@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #191b1c;
+    color: #ecf0f1;
+    padding: 0px;
+}
+.upload-container {
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 70px;
+    background: #252c32;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #ecf0f1;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #d1ddde;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #81786a;
+    border-radius: 5px;
+    background: #434c56;
+    color: #d1cdc7;
+    box-sizing: border-box;
+}
+
+
+
+/* Style for submit buttons */
+input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #801212f0; 
+    color: #ecf0f1;
+    border: 1px solid #212121; 
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s; 
+    width: auto; /* Override the 100% width to allow buttons to size naturally */
+    display: inline-block; /* Ensure buttons are inline */
+}
+
+/* Specific styling for the Cancel button to differentiate it */
+input[type="submit"][name="cancel"] {
+    background-color: #213155f0; /* Matches the select background color from index.php for a "neutral" look */
+}
+
+input[type="submit"]:hover {
+    background-color: #95a6b0; 
+}.upload-button {
+    padding: 8px 15px;
+    background-color: #801212f0;
+    color: #ecf0f1;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #95a6b0;
+}
+
+.cancel-button {
+    padding: 8px 15px;
+    background-color: #801212f0;
+    color: #ecf0f1;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #95a6b0;
+}
+
+
+
+.flash {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upload-container {
+        max-width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+}
