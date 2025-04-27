@@ -36,8 +36,6 @@ install_lamp() {
             sudo apt install php libapache2-mod-php php-mysql php-common php-cli php-json php-curl php-zip php-gd php-mbstring -y
             # Install Composer and prerequisites
             sudo apt install composer curl git unzip -y
-            # Update Composer to the latest version
-            sudo composer self-update
             # Restart Apache
             sudo systemctl restart apache2
             ;;
@@ -59,8 +57,6 @@ install_lamp() {
             sudo dnf install php php-mysqlnd php-common php-cli php-json php-curl php-zip php-gd php-mbstring -y
             # Install Composer and prerequisites
             sudo dnf install composer curl git unzip -y
-            # Update Composer to the latest version
-            sudo composer self-update
             # Restart Apache
             sudo systemctl restart httpd
             ;;
@@ -84,8 +80,6 @@ install_lamp() {
             sudo $PKG_MANAGER install php php-mysqlnd php-common php-cli php-json php-curl php-zip php-gd php-mbstring -y
             # Install Composer and prerequisites
             sudo $PKG_MANAGER install composer curl git unzip -y
-            # Update Composer to the latest version
-            sudo composer self-update
             # Restart Apache
             sudo systemctl restart httpd
             ;;
@@ -111,8 +105,6 @@ install_lamp() {
             sudo sed -i '$a AddType application/x-httpd-php .php' /etc/httpd/conf/httpd.conf
             # Install Composer and prerequisites
             sudo pacman -S composer curl git unzip --noconfirm
-            # Update Composer to the latest version
-            sudo composer self-update
             # Restart Apache
             sudo systemctl restart httpd
             ;;
@@ -134,8 +126,6 @@ install_lamp() {
             sudo zypper install -y php php-mysql php-common php-cli php-curl php-zip php-gd php-mbstring apache2-mod_php
             # Install Composer and prerequisites
             sudo zypper install -y composer curl git unzip
-            # Update Composer to the latest version
-            sudo composer self-update
             # Restart Apache
             sudo systemctl restart apache2
             ;;
@@ -158,25 +148,24 @@ detect_distro
 # Install LAMP stack
 install_lamp
 
+echo "LAMP stack installation complete!"
+
+sudo cp -r ~/StudyShare/ /var/www/html
+sudo chown -R www-data:www-data /var/www/html/StudyShare
+sudo chmod -R 766 /var/www/html/StudyShare
+
+#sudo mkdir -p /var/www/StudyShare/uploads/
+#sudo chown -R www-data:www-data /var/www/StudyShare/uploads/
+#sudo chmod -R 766 /var/www/StudyShare/uploads/
+#sudo systemctl restart apache2
+#sudo systemctl restart mysql
+
 # Install PHPMailer
 cd /var/www/html/StudyShare
 composer require phpmailer/phpmailer
 
-echo "LAMP stack installation complete!"
-clear
 
-cp -r ~/StudyShare/ /var/www/html
-sudo chown -R www-data:www-data /var/www/html/StudyShare
-sudo chmod -R 777 /var/www/html/StudyShare
-
-sudo mkdir /var/www/school-crud/uploads/
-sudo chown -R www-data:www-data /var/www/school-crud/uploads/
-sudo chmod -R 777 /var/www/school-crud/uploads/
-sudo systemctl restart apache2
-sudo systemctl restart mysql
-
-
-echo "Setup complete! You can now access your PHP application at http://
+echo "Setup complete! You can now access your PHP application"
 
 
 
