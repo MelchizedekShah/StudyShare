@@ -1,4 +1,4 @@
-# StudyShare
+# StudyShare alpha version (not completed)
 
 StudyShare is an open-source platform designed to empower students and learners by facilitating the seamless sharing of educational resources, study materials, and knowledge. Whether you're collaborating on notes, sharing tutorials, or discovering new learning content, StudyShare makes education more accessible and collaborative.
 
